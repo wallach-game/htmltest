@@ -1,0 +1,17 @@
+:root {
+    --backgroudpink: #edbbbe;
+    --frontgroundpink: #edbbbe;
+    --highlightpink: #f4d0cf;
+}
+
+body {
+    margin: 0;
+    background: var(--backgroudpink);
+}
+
+.mainwindow {
+    width: calc(100vw - 2rem);
+    height: calc(100vh - 2rem);
+
+    border: solid red 1px;
+}
