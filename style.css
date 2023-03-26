@@ -7,11 +7,14 @@
 body {
     margin: 0;
     background: var(--backgroudpink);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .mainwindow {
-    width: calc(100vw - 2rem);
-    height: calc(100vh - 2rem);
+    width: calc(100vw - 4rem);
+    height: calc(100vh - 4rem);
 
     border: solid red 1px;
 }
