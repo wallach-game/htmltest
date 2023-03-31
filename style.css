@@ -1,50 +1,122 @@
 :root {
-    --backgroudpink: #edbbbe;
-    --frontgroundpink: #edbbbe;
-    --highlightpink: #f4d0cf;
-    --mainwindowoffset: 5rem;
+  --backgroudpink: #edbbbe;
+  --frontgroundpink: #edbbbe;
+  --highlightpink: #f4d0cf;
+  --mainwindowoffset: 5rem;
+  --font: 'Noto Serif Display', serif;
 }
 
 body {
-    margin: 0;
-    /* background: var(--backgroudpink); */
-    background: rgb(237, 187, 190);
-    background: linear-gradient(137deg, rgba(237, 187, 190, 1) 0%, rgba(244, 208, 207, 1) 45%, rgba(237, 187, 190, 1) 100%);
-    height: min-content;
-    
+  margin: 0;
+  background: linear-gradient(137deg, rgba(237, 187, 190, 1) 0%, rgba(244, 208, 207, 1) 45%, rgba(237, 187, 190, 1) 100%);
+  height: min-content;
+}
+
+
+header {
+  background-color: var(--backgroudpink);
+  padding: 1rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  display: block;
+  padding: 1rem;
+  color: #333;
+  text-decoration: none;
 }
 
 .mainwindowwrapper {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .mainwindow {
-    /* width: calc(100vw - var(--mainwindowoffset)); */
-    width: 60vw;
-    height: calc(100vh - var(--mainwindowoffset));
-    background: var(--frontgroundpink);
-    border: solid var(--highlightpink) 1px;
+  width: 60vw;
+  height: calc(100vh - var(--mainwindowoffset));
+  background: var(--frontgroundpink);
+  border: solid var(--highlightpink) 1px;
+  display: flex;
+  justify-content: center;
+  font-family: var(--font);
+  color: #635353;
+}
 
-    display: flex;
-    justify-content: center;
-    font-family: 'Noto Serif Display', serif;
+nav {
+  font-family: var(--font);
+  font-weight: 600;
 }
 
 .mainwindow>div {
-    width: 50%;
-    height: 100;
+  width: 50%;
+  height: 100;
 }
 
 .imageWrapper {
-    display: flex;
-    align-items: flex-end;
+  display: flex;
+  align-items: flex-end;
 }
 
 .mainwindow>div>img {
-    width: 25em;
-    height: 25em;
+  width: 25em;
+  /* reduce size of image */
+  height: 25em;
+}
+
+@media (orientation: portrait) {
+  .mainwindow{
+    width: 60%;
+    display: flex;
+    position: relative;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    overflow: hidden;
+    padding: 0em 1em 0em 1em;  
+  }
+
+  .mainwindow > .imageWrapper {
+    position: absolute;
+    margin-top: 22em;
+    margin-right: 1em;
+    z-index: 0;
+  }
+
+  .mainwindow > div {
+    width: 100%;
+  }
+
+  .mainwindow > .textPart {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    z-index: 1;
+  }
+
+  .mainwindow > .textPart > h1 {
+    font-size: 1.75em;
+  }
+
+  .mainwindow > .textPart > h2 {
+    font-size: 1.25em;
+    margin-top: -0.5em;
+  }
+
+  .mainwindow > .textPart > p {
+    font-weight: 600;
+  }
+
+  .mainwindow>div>img{
+    width: 17em;
+    height: 17em;
+  }
 }

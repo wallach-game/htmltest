@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wave Function Collapse Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Wave Function Collapse Example</h1>
+    <canvas id="canvas" width="300" height="300"></canvas>
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+
+        const inputPattern = [
+            ['#00f', '#00f', '#00f'],
+            ['#00f', '#0f0', '#00f'],
+            ['#00f', '#00f', '#00f'],
+        ];
+
+        const gridSize = 10;
+        const outputWidth = canvas.width / gridSize;
+        const outputHeight = canvas.height / gridSize;
+
+        function getRandomElement(arr) {
+            return arr[Math.floor(Math.random() * arr.length)];
+        }
+
+        function generateOutput() {
+            const output = [];
+
+            for (let y = 0; y < outputHeight; y++) {
+                const row = [];
+                for (let x = 0; x < outputWidth; x++) {
+                    const inputX = Math.floor(Math.random() * (inputPattern[0].length - 1));
+                    const inputY = Math.floor(Math.random() * (inputPattern.length - 1));
+
+                    const color = getRandomElement([
+                        inputPattern[inputY][inputX],
+                        inputPattern[inputY][inputX + 1],
+                        inputPattern[inputY + 1][inputX],
+                        inputPattern[inputY + 1][inputX + 1],
+                    ]);
+
+                    row.push(color);
+                }
+                output.push(row);
+            }
+
+            return output;
+        }
+
+        function drawOutput(output) {
+            for (let y = 0; y < outputHeight; y++) {
+                for (let x = 0; x < outputWidth; x++) {
+                    ctx.fillStyle = output[y][x];
+                    ctx.fillRect(x * gridSize, y * gridSize, gridSize, gridSize);
+                }
+            }
+        }
+
+        const output = generateOutput();
+        drawOutput(output);
+    </script>
+</body>
+</html>
