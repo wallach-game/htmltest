@@ -5,6 +5,7 @@
   --fixscreenheight: 7em;
   --fixscreenweigth: 7em;
   --font: 'Noto Serif Display', serif;
+  --font-size-base: 1em;
 }
 
 body {
@@ -67,6 +68,7 @@ nav a {
 
 .mainwindow {
   width: calc(100vw - var(--fixscreenweigth));
+  max-width: 60em;
   height: calc(100vh - var(--fixscreenheight) - 4em);
   background: var(
   --frontgroundpink);
@@ -99,15 +101,25 @@ nav {
   background-color: transparent;
 }
 
+.textPart > h1{
+  font-size: calc( var(--font-size-base) * 2 );
+}
+
+
+.textPart > h2{
+  font-size: calc( var(--font-size-base) * 1.5 );
+}
+
 .textPart>p {
+  font-size: calc( var(--font-size-base) * 1.25 ) ;
   z-index: 1;
   /* mix-blend-mode: plus-lighter; */
   color: #414141;
 }
 
 .mainwindow>div>img {
-  width: 25em;
-  height: 25em;
+  width: 35rem;
+  height: 35rem;
   mix-blend-mode: luminosity;
   z-index: 3;
 }
@@ -192,7 +204,7 @@ nav {
   }
 
   .mainwindow>div>img {
-    width: 16em;
-    height: 16em;
+    width: 16rem;
+    height: 16rem;
   }
 }
