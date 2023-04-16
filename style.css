@@ -5,7 +5,8 @@
   --fixscreenheight: 7em;
   --fixscreenweigth: 7em;
   --font: 'Noto Serif Display', serif;
-  --font-size-base: 1em;
+  --font-size-base: 12px;
+  --static-em-unit: 12px;
 }
 
 body {
@@ -40,7 +41,7 @@ header {
   background-color: var(--backgroudpink);
   padding: 1rem;
   align-items: center;
-  height: 2rem;
+  max-height: calc( var(--static-em-unit) * 4 );
   display: flex;
   justify-content: center;
 }
@@ -69,8 +70,8 @@ nav a {
 
 .mainwindow {
   width: calc(100vw - var(--fixscreenweigth));
-  max-width: 60em;
-  height: calc(100vh - var(--fixscreenheight) - 4em);
+  min-height: calc(100vh - var(--fixscreenheight) - 4em);
+    
   background: var(
   --frontgroundpink);
   border: solid var(
@@ -115,13 +116,16 @@ nav {
 .textPart>p {
   font-size: calc( var(--font-size-base) * 1.25 ) ;
   z-index: 1;
+  text-align: right;
   /* mix-blend-mode: plus-lighter; */
   color: #414141;
 }
 
 .mainwindow>div>img {
-  width: 35rem;
-  height: 35rem;
+  width: calc(25 * var(--static-em-unit));
+  height: calc(25 * var(--static-em-unit));
+  max-width: 100%;
+  max-height: 100%;
   mix-blend-mode: luminosity;
   z-index: 3;
 }
@@ -134,6 +138,7 @@ nav {
     --highlightpink: #f4d0cf;
     --fixscreenheight: 7em;
     --fixscreenweigth: 7em;
+    --font-size-base: 0.85em;
     --font: 'Noto Serif Display', serif;
 }
   
@@ -157,8 +162,8 @@ nav {
  
 
   .mainwindow {
-    width: calc(100vw - var(--fixscreenweigth));
-    height: calc(100vh - var(--fixscreenheight) - 2em);
+    min-width: calc(100vw - var(--fixscreenweigth));
+    min-height: calc(100vh - var(--fixscreenheight) - 2em);
     /* width: calc(100vw - (5 * var(--mainwindowoffset))); */
     display: flex;
     position: relative;
@@ -190,23 +195,51 @@ nav {
     /* background-color: #edbbbe; */
   }
 
+  /* .textPart > h1{
+    font-size: calc( var(--font-size-base) * 2 );
+  }
+  
+  
+  .textPart > h2{
+    font-size: calc( var(--font-size-base) * 1.5 );
+  }
+  
+  .textPart>p {
+    font-size: calc( var(--font-size-base) * 1.25 ) ;
+    z-index: 1;
+    mix-blend-mode: plus-lighter;
+    color: #414141;
+  } */
+
   .mainwindow>.textPart>h1 {
-    font-size: 1.75em;
+    font-size: calc( var(--font-size-base) * 2 );
   }
 
   .mainwindow>.textPart>h2 {
-    font-size: 1.25em;
+    font-size: calc( var(--font-size-base) * 1.5 );
     margin-top: -0.5em;
     /* text-align: right; */
   }
 
   .mainwindow>.textPart>p {
     font-weight: 600;
+    font-size: calc( var(--font-size-base) * 1.25 ) ;
     text-align: right;
   }
 
   .mainwindow>div>img {
-    width: 16rem;
-    height: 16rem;
+    width: calc(15 * var(--static-em-unit));
+    height: calc(15 * var(--static-em-unit));;
+  }
+}
+
+@media screen and (max-width: 1024px ) {
+  :root {
+    --font-size-base: 1em;
+}
+  
+  .mainwindow>div>img {
+    width: calc(35 * var(--static-em-unit));
+    height: calc(35 * var(--static-em-unit));
   }
 }
