@@ -8,15 +8,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 
 <body>
     <picture>
-        <source media="(min-width:1024px)" srcset="img/169.webp">
-        <source media="(min-aspect-ratio: 9/20)" srcset="img/921.webp">
-        <source media="(min-aspect-ratio: 9/15)" srcset="img/916.webp">
+        <source media="(min-width:1024px)" srcset="img/onas/169.webp">
+        <source media="(min-aspect-ratio: 9/20)" srcset="img/onas/921.webp">
+        <source media="(max-height: 700px)" srcset="img/onas/916.webp">
         <img class="backImage" src="img/169.webp" alt="Flowers" style="z-index: -1;">
     </picture>
 
@@ -25,56 +26,40 @@
         <img src="img/logo.svg" alt="">
         <nav>
             <ul>
-                <li><a href="">Domů</a></li>
-                <li><a href="">O nás</a></li>
-                <li><a href="">Zámečnictví a svařovaní</a></li>
-                <li><a href="">Zakázkové práce</a></li>
-                <li><a href="">Obráběcí práce</a></li>
-                <li><a href="">Kde pracujeme</a></li>
+                <li><span class="material-symbols-outlined ikonka" onclick="changeMenuState()">
+                    menu
+                    </span></li>
+                <li><a href="./index.html">Domů</a></li>
+                <li><a href="./onas.html">O nás</a></li>
+                <li><a href="./zamecnistvi.html">Zámečnictví a svařovaní</a></li>
+                <li><a href="./zakazkove.html">Zakázkové práce</a></li>
+                <li><a href="./obrabeci.html">Obráběcí práce</a></li>
+                <li><a href="./kdepracujeme.html">Kde pracujeme</a></li>
                 <li><a href="">Kontakt</a></li>
             </ul>
         </nav>
     </header>
-
-    <article>
-        <div class="textwrap">
-            <div class="diff">
-                <h1 class="diff">DWM</h1>
-            </div>
-            
-            <h1>&nbsp;</h1>
-            <h1>Steel</h1>
-        </div>
-    </article>
-    <article>
-        <h2>vaše nadstandardní kvalita v oblasti zámečnických a svařovacích prací. S námi není projekt příliš velký ani
-            malý. Kontaktujte nás pro flexibilní a rychlé řešení.</h2>
-    </article>
-
-    <article>
-        o nás
-    </article>
-
-    <article>
-        <p>Zámečnictví a svařování
-
-            Zámečnictví a svařování jsou dvě klíčové dovednosti, které mohou být nesmírně užitečné při řešení různých konstrukčních a opravných projektů. Ať už potřebujete opravit poškozenou konstrukci, vytvořit konstrukci novou nebo zabezpečit svůj domov, odborníci v oblasti zámečnictví a svařování vám mohou poskytnout širokou škálu služeb a řešení.
-            
-            Jedním z hlavních aspektů naší práce je svařování nestandardních záležitostí. Naše zkušenosti a dovednosti nám umožňují pracovat s různými materiály a technikami, jako jsou MMA, MIG/MAG a TIG svařování. Tyto metody nám umožňují přizpůsobit se specifickým potřebám našich zákazníků a zajistit, že výsledný produkt bude vysoce kvalitní a odolný.
-            
-            Kromě nestandardních projektů se také zabýváme klasickými svařovacími pracemi, jako je výroba a montáž potrubí, stoupaček, trubek, zábradlí, bran a dalších konstrukčních prvků. Naše široká škála služeb zajišťuje, že můžeme uspokojit potřeby nejrůznějších zákazníků, od domácností po průmyslové podniky.
-            
-            Naše DWM Steel dílna je vybavena nejmodernějšími nástroji a zařízeními, které nám umožňují provádět svařovací práce s vysokou přesností a efektivitou. Pokud je to vhodnější pro váš projekt, jsme také schopni provádět svařování přímo na místě. Tímto způsobem můžeme zajistit, že naše práce bude co nejvíce vyhovovat vašim požadavkům a představám.
-            
-            Při práci s námi můžete očekávat přátelský a profesionální přístup. Jsme hrdí na to, že poskytujeme našim zákazníkům kvalitní služby a řešení, která splňují jejich potřeby a očekávání. Ať už máte konkrétní projekt na mysli nebo hledáte odborné rady ohledně zámečnických a svařovacích prací, jsme zde, abychom vám pomohli.
-            
-            V naší nabídce služeb najdete kombinaci odborných znalostí, zkušeností a inovativních technik, které nám umožňují poskytovat našim zákazníkům špičkové řešení v oblasti zámečnictví a svařování. Neváhejte nás kontaktovat a zjistěte, jak vám můžeme pomoci s vaším projektem.
+        <article>
+            <h2>O nás</h2>
+            <p>Vítejte na naší webové stránce! Jsme DWM Steel, firma skládající se z odborníků ve svých profesích a rádi bychom vám představili náš příběh.
             </p>
-    </article>
+            <p>Začalo to všechno před několika lety, když jsme si uvědomili, že na trhu chybí firma, která by nabízela komplexní řešení v oblasti zámečnických a svařovacích prací. Chtěli jsme vytvořit tým odborníků, kteří by dokázali splnit i ty nejnáročnější požadavky našich zákazníků a zároveň dbali na každý detail. A tak vznikla DWM Steel.</p>
+            <p>Našimi ideálními zákazníky jsou firmy, které hledají spolehlivého partnera pro realizaci svých projektů. Ať už jde o výrobu na míru, opravy nebo údržbu strojů a zařízení, jsme připraveni poskytnout naše služby na nejvyšší úrovni. Naším cílem je udržet nadstandartní kvalitu a věnovat pozornost všem detailům při každé naší práci.
+                </p>
+            <p>Co nás dělá unikátními a odlišnými od konkurence? Kromě našeho širokého spektra služeb a odborných znalostí v oblasti zámečnických a svařovacích prací, jsme také hrdí na to, že disponujeme většinou obráběcích strojů k vytvoření i těch nejnáročnějších projektů. To nám umožňuje být flexibilní a rychle reagovat na potřeby našich zákazníků.</p>
+            <p>Proč byste si měli vybrat právě nás? Protože pro nás není žádný projekt příliš malý nebo příliš velký. Jsme schopni se přizpůsobit vašim požadavkům a společně s vámi najít řešení, které bude pro vás to nejlepší. A co je nejdůležitější - děláme to s láskou k naší práci a s respektem k našim zákazníkům.
+                </p>
+            <p>
+                Takže pokud hledáte firmu, která vám poskytne profesionální služby v oblasti zámečnických a svařovacích prací, jste na správném místě. Neváhejte nás kontaktovat a rádi vám pomůžeme s vaším projektem. Těšíme se na spolupráci s vámi!
+            </p>
+
+        </article>
+
 
     <footer>
         .
     </footer>
 </body>
+<script src="main.js"></script>
 
 </html>

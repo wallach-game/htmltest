@@ -79,12 +79,18 @@ article > h1:nth-child(2){
     margin-top: -1.3em;
 }
 
-article >h1 {
+article > h1 {
     font-size: 5em;
 }
 
-article > p {
+
+article > h2 {
     font-size: 2em;
+}
+
+
+article > p {
+    font-size: 1.5em;
 }
 
 
@@ -130,8 +136,24 @@ footer {
     justify-content: flex-start;
     align-items: center;
     overflow: hidden;
-    height: 0em;
+    height: 2em;
     margin-bottom: 0em;
+    padding: 0;
+    transition: height 1s;
+    margin: 0;
+}
+
+.showed{
+    height: 16em;
+}
+
+.ikonka {
+    rotate: 0deg;
+    transition:  rotate 1s;
+}
+
+.spinned{
+    rotate: 180deg
 }
 
 header {
@@ -149,7 +171,7 @@ header > img {
     scale: 0.7;
     width: 12em;
     position: unset;
-    margin-left: 2.6em;
+    margin-left: 0em;
 }
 
 header > nav > ul > li 
@@ -184,7 +206,7 @@ article > h1:nth-child(2){
 
 @media (max-height: 700px) {
     .backImage {
-margin-top: -9em;
+margin-top: 3em;
 }
 
 article > p {
