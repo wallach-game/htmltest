@@ -9,18 +9,18 @@ html {
 body {
     margin: 0;
     width: 100vw;
-    overflow: hidden;
+    overflow: scroll;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 100vh;
+    height: min-content;
     background-color: #fff;
     
 }
 
 picture {
-        position: absolute;
+        position: fixed;
 }
 
 picture > img {
@@ -34,36 +34,66 @@ picture > img {
 header {
     /* height: min-content; */
     background-color: white;
-    z-index: 1;
+    z-index: 3;
     display: flex;
     justify-content: center;
     flex-direction: row;
     height: 5em;
     align-items: center;
     width: 100vw;
+    position: fixed;
 }
 
 header > img {
     scale: 0.7;
     width: 12em;
     position: absolute;
-    margin-left: calc(-100vw - -8.5em);
+    margin-left: calc(-100vw - -8.5em); 
 }
 
 header > nav > ul {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    width: 47em;
+    width: 58vw;
     /* align-items: center; */
+    list-style-type: none;
+}
+
+header > nav > ul > li > a 
+{
+    color: #000;
+    text-decoration: none;
 }
 
 article {
-    z-index: 1;
-    color: #000000;
-    width: 57vw;
-    margin-top: -16em;
+    z-index: 2;
+    width: 90vw;
+    text-shadow: 0px 0px 4px #535252;
+    margin-top: 6em;
 }
+
+article > h1:nth-child(2){
+    text-align: left;
+    margin-left: 1.5em;
+    margin-top: -1.3em;
+}
+
+article >h1 {
+    font-size: 5em;
+}
+
+article > p {
+    font-size: 2em;
+}
+
+
+/*
+font-size: 5em;
+    text-align: left;
+    text-shadow: 1px 1px 4px black; 
+    text-shadow: 0px 0px 4px #535252;
+*/
 
 .textwrap {
     display: flex;
@@ -71,27 +101,8 @@ article {
 
 }
 
-article > div > div > h1 {
-    font-size: 5em;
-    text-align: left;
-    /* text-shadow: 1px 1px 4px black; */
-    text-shadow: 0px 0px 4px #535252;
-}
-
-article > div > h1 {
-    font-size: 5em;
-    text-align: left;
-    /* text-shadow: 1px 1px 4px black; */
-    text-shadow: 0px 0px 4px #535252;
-}
-
-article > h2 {
-    font-size: 1.5em;
+.talightright{
     text-align: right;
-    color: #000000;
-    text-shadow: 0px 0px 4px #535252;
-    margin-top: -2em;
-    font-weight: 500;
 }
 
 footer {
@@ -102,24 +113,81 @@ footer {
     mix-blend-mode: difference;
 }
 
+#zamecnistvi {
+    margin-top: 3em;
+    width: 80vw;
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+  }
+
 @media (orientation: portrait) {
     header > nav > ul {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    overflow: hidden;
+    height: 0em;
+    margin-bottom: 0em;
+}
+
+header {
+    /* height: min-content; */
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    height: min-content;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+}
+
+header > img {
+    scale: 0.7;
+    width: 12em;
+    position: unset;
+    margin-left: 2.6em;
+}
+
+header > nav > ul > li 
+{
+    padding-bottom: 0.5em;
+}
+
+article > h1:nth-child(2){
+    text-align: left;
+    margin-left: 1.5em;
+    margin-top: -1.3em;
+}
+
+article{
+    margin-top: 10em;
+}
+
 }
 
 
-@media (min-aspect-ratio: 9/20) {
+@media (max-aspect-ratio: 9/20) {
     .backImage {
         margin-top: 0em;
 }
+
+article > h1:nth-child(2){
+    margin-right: 0.7em;
 }
+
 }
+
 
 @media (max-height: 700px) {
     .backImage {
 margin-top: -9em;
+}
+
+article > p {
+    font-size: 1.5em;
 }
 }
