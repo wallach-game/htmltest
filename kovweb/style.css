@@ -66,6 +66,16 @@ header > nav > ul > li > a
     text-decoration: none;
 }
 
+header > nav > ul > li 
+{
+    border: 1px rgba(128, 128, 128, 0.338) solid;
+    border-radius: 2em;
+    padding: 0.5em;
+    width: 12em;
+    display: flex;
+    justify-content: center;
+}
+
 .ikonka {
     rotate: 0deg;
     transition:  rotate 1s;
@@ -142,7 +152,7 @@ footer {
     justify-content: flex-start;
     align-items: center;
     overflow: hidden;
-    height: 2em;
+    height: 3em;
     margin-bottom: 0em;
     padding: 0;
     transition: height 1s;
@@ -150,7 +160,7 @@ footer {
 }
 
 .showed{
-    height: 16em;
+    height: 25em;
 }
 
 .ikonka {
@@ -184,6 +194,7 @@ header > img {
 header > nav > ul > li 
 {
     padding-bottom: 0.5em;
+    margin-bottom: 0.5em;
 }
 
 article > h1:nth-child(2){
