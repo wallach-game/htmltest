@@ -156,6 +156,7 @@ footer {
 .ikonka {
     rotate: 0deg;
     transition:  rotate 1s;
+    display: initial;
 }
 
 .spinned{
