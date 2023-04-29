@@ -66,6 +66,12 @@ header > nav > ul > li > a
     text-decoration: none;
 }
 
+.ikonka {
+    rotate: 0deg;
+    transition:  rotate 1s;
+    display: none;
+}
+
 article {
     z-index: 2;
     width: 90vw;
