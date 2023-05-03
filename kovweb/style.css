@@ -162,8 +162,10 @@ footer {
 
 .ikonka {
     rotate: 0deg;
-    transition:  rotate 1s;
+    transition: rotate 1s;
     display: unset;
+    width: 100%;
+    text-align: center;
 }
 
 .spinned{
