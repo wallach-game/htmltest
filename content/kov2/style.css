@@ -8,8 +8,8 @@ body > div {
     position: absolute;
     width: 100vw;
     height: 100vh;
-    top: 0;
-    left: 0;
+    top: 50vw;
+    left: 50vh;
 }
 
 p:after {
