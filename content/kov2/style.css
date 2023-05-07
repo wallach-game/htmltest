@@ -1,0 +1,12 @@
+:root {
+    --counter: var(0);
+}
+
+
+body:nth-child(0){
+    --counter: var(calc(var(--counter) + 1));
+}
+
+p::after {
+    content: var(--counter);
+}
