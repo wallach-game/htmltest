@@ -1,12 +1,11 @@
-:root {
-    --counter: var(0);
+body {
+    counter-reset:counter;
 }
 
-
-body:nth-child(0){
-    --counter: var(calc(var(--counter) + 1));
+body > div {
+    counter-increment: counter;
 }
 
-p::after {
-    content: var(--counter);
+p:after {
+    content: "pocet" counter(counter);
 }
